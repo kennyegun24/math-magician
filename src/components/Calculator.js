@@ -1,37 +1,38 @@
 import './calculator.css';
 import React from 'react';
+import calculate from '../logic/calculate';
 
 class Calculator extends React.Component {
   constructor(pro) {
     super(pro);
-    this.keys = {};
+    this.keys = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
+
+    this.state = {
+      total: '0',
+      next: null,
+      operation: null,
+    };
+  }
+
+  onCalculate = (e) => {
+    const btnName = e.target.innerText;
+
+    const calc = calculate(this.state, btnName);
+    this.setState(calc);
   }
 
   render() {
+    const { total, next } = this.state;
     return (
       <section className="calcSection">
         <div className="calculator">
-          <div className="screen" />
+          <div className="screen">
+            <p className="screenCalc">
+              {next || total || 0 }
+            </p>
+          </div>
           <div className="arithmetics">
-            <button type="button" className="ash numbers border">AC</button>
-            <button type="button" className="ash numbers border">+/-</button>
-            <button type="button" className="ash numbers border">%</button>
-            <button type="button" className="orange numbers border">/</button>
-            <button type="button" className="ash numbers border">7</button>
-            <button type="button" className="ash numbers border">8</button>
-            <button type="button" className="ash numbers border">9</button>
-            <button type="button" className="orange numbers border">*</button>
-            <button type="button" className="ash numbers border">4</button>
-            <button type="button" className="ash numbers border">5</button>
-            <button type="button" className="ash numbers border">6</button>
-            <button type="button" className="orange numbers border">-</button>
-            <button type="button" className="ash numbers border">1</button>
-            <button type="button" className="ash numbers border">2</button>
-            <button type="button" className="ash numbers border">3</button>
-            <button type="button" className="orange numbers border">+</button>
-            <button type="button" className="ash zero border">0</button>
-            <button type="button" className="ash numbers border">.</button>
-            <button type="button" className="orange numbers border">=</button>
+            {this.keys.map((key) => <button key={key} onClick={this.onCalculate} type="button" className="numbers border">{key}</button>)}
           </div>
         </div>
       </section>
