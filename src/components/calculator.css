@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --orange: orange;
+}
+
 .border {
   border: 1px solid #111;
 }
@@ -12,9 +16,6 @@
   background-color: rgb(224, 218, 218);
 }
 
-.orange {
-  background-color: orange;
-}
 
 .calcSection {
   display: flex;
@@ -25,8 +26,15 @@
 
 .screen {
   width: 400px;
-  height: 70px;
+  height: 40px;
   background: grey;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.screenCalc {
+  padding: 0 20px;
 }
 
 .arithmetics {
@@ -38,6 +46,25 @@
 .numbers {
   height: 50px;
   width: 100px;
+}
+
+.numbers:nth-child(4) {
+  background-color: var(--orange);
+}
+.numbers:nth-child(8) {
+  background-color: var(--orange);
+}
+.numbers:nth-child(12) {
+  background-color: var(--orange);
+}
+.numbers:nth-child(16) {
+  background-color: var(--orange);
+}
+.numbers:nth-child(19) {
+  background-color: var(--orange);
+}
+.numbers:nth-child(17) {
+  width: 200px;
 }
 
 .zero {
