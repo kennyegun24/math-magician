@@ -5,7 +5,7 @@ import calculate from '../logic/calculate';
 const Calculator = () => {
   const keys = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
 
-  const [calc, setCar] = useState({
+  const [calc, setCalc] = useState({
     total: '0',
     next: null,
     operation: null,
@@ -15,7 +15,7 @@ const Calculator = () => {
     const btnName = e.target.innerText;
 
     const calcs = calculate(calc, btnName);
-    setCar(calcs);
+    setCalc(calcs);
   };
 
   const { total, next } = calc;
