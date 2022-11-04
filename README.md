@@ -8,7 +8,6 @@ The project is about building web application with React.js. This is a calculato
 ## Project web demo link.
 (Not Yet Available)
 
-
 ## Built With 
 - React
 - Css. 
