@@ -13,6 +13,7 @@ body {
   justify-content: space-around;
   align-items: center;
   background: rgb(62, 61, 61);
+  height: 50px;
 }
 
 .link {
@@ -24,6 +25,7 @@ body {
 .header {
   font-size: 18px;
   color: #fff;
+  text-decoration: none;
 }
 
 .navDiv {
