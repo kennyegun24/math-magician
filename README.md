@@ -6,7 +6,7 @@ The project is about building web application with React.js. This is a calculato
 
 
 ## Project web demo link.
-(Not Yet Available)
+[live demo](https://timely-sprite-6d1f1f.netlify.app)
 
 ## Built With 
 - React
