@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgb(62, 61, 61);
+}
+
+.link {
+  color: red;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.header {
+  font-size: 18px;
+  color: #fff;
+}
+
+.navDiv {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
