@@ -1,0 +1,18 @@
+.quotes {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+  margin: auto;
+}
+
+.quotes p {
+  border: 1px solid #1c1c1c;
+  padding: 10px;
+  background: #1c1c1c;
+  color: #fff;
+  border-radius: 20px;
+}
