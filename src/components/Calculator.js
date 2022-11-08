@@ -20,17 +20,24 @@ const Calculator = () => {
 
   const { total, next } = calc;
   return (
-    <section className="calcSection">
-      <div className="calculator">
-        <div className="screen">
-          <p className="screenCalc">
-            {next || total || 0 }
-          </p>
-        </div>
-        <div className="arithmetics">
-          {keys.map((key) => <button key={key} onClick={onCalculate} type="button" className="numbers border">{key}</button>)}
-        </div>
+    <section className="flex">
+      <div>
+        <h2>
+          Let&apos;s do some math!
+        </h2>
       </div>
+      <section className="calcSection">
+        <div className="calculator">
+          <div className="screen">
+            <p className="screenCalc">
+              {next || total || 0 }
+            </p>
+          </div>
+          <div className="arithmetics">
+            {keys.map((key) => <button key={key} onClick={onCalculate} type="button" className="numbers border">{key}</button>)}
+          </div>
+        </div>
+      </section>
     </section>
   );
 };
