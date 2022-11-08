@@ -8,6 +8,13 @@
   --orange: orange;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
 .border {
   border: 1px solid #111;
 }
